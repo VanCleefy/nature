@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutrition App - BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Nutrition App</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('bmi_calculator') }}">BMI Calculator</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>BMI Calculator</h2>
+        <form action="{{ url_for('bmi_calculator') }}" method="post">
+            <label for="weight">Weight (kg):</label>
+            <input type="text" name="weight" required>
+            <br>
+            <label for="height">Height (cm):</label>
+            <input type="text" name="height" required>
+            <br>
+            <input type="submit" value="Calculate BMI">
+        </form>
+        {% if bmi %}
+        <p>Your BMI: {{ bmi }}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2023 Nutrition App</p>
+    </footer>
+</body>
+</html>
+

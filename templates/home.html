@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutrition App - Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Nutrition App</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('bmi_calculator') }}">BMI Calculator</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <section class="video-section">
+            <h2>Introduction to Healthy Nutrition</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4MlMQPfoq3I" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="info-section">
+            <h2>Learn About Nutrition</h2>
+            <p>Explore the benefits of a balanced diet and healthy eating habits.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Nutrition App</p>
+    </footer>
+</body>
+</html>
